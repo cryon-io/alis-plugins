@@ -1,0 +1,24 @@
+{
+    "version": "0.0.1",
+    "post-setup": {
+        "entrypoint": "swap.sh",
+        "parameters": [
+            "{size}",
+            "{path}"
+        ],
+        "exit_codes": {
+            "1": "Swap size not specified",
+            "2": "Not enough free space",
+            "3": "Swap file creation failed",
+            "4": "Configuration of file permissions for swap file failed",
+            "5": "mkswap failed",
+            "6": "Final swap size is lower than requested"
+        }
+    },
+    "info": {
+        "entrypoint": "info.sh",
+        "parameters": [
+            "{path}"
+        ]
+    }
+}

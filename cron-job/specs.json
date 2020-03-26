@@ -1,0 +1,18 @@
+{
+    "version": "0.0.1",
+    "pre-setup": {
+        "entrypoint": "cron.sh",
+        "parameters": [
+            "{cmd}",
+            "{minute}",
+            "{hour}",
+            "{dayOfMonth}",
+            "{month}",
+            "{dayOfWeek}"
+        ],
+        "exit_codes": {
+            "1": "Failed to configure cronjob"
+        }
+    },
+    "info": "info.sh"
+}
